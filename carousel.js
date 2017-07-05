@@ -11,9 +11,10 @@ for (i=1; i< carObjects.length; i++) {
 	individualObject.classList.add("hidden");
 	console.log(individualObject)
 }
-//adding in buttons
+//adding in buttons for 1st set 
 var buttons = '<div id="controls"><p id="control-prev" class="btn btn-primary">Previous slide</p><p id="control-next" class="btn btn-primary">Next slide</p></div>'
 carousel.insertAdjacentHTML("afterend", buttons)
+
 
 
 	
@@ -58,19 +59,19 @@ document.getElementById("control-prev").addEventListener(
 //the trigger to go the the last photo so you have (0)-1 = -1 + 6 = 5%6. You go back to 5 
 //but 'up' to 0. 
 
-var unit=document.getElementById("carousel");
-var title = 
-console.log(unit);
-//console.log(title.innerText);
-
-unit.addEventListener(
-	"click",
-	function hide(event) {
-		carousel.classList.add("hidden")
-		console.log("bye")
-
-	}
-);
+// var unit=document.getElementById("carousel");
+// var title = 
+// console.log(unit);
+// //console.log(title.innerText);
+// 
+// unit.addEventListener(
+// 	"click",
+// 	function hide(event) {
+// 		carousel.classList.add("hidden")
+// 		console.log("bye")
+// 
+// 	}
+// );
 // console.log(div.classList.contains("row-fluid"));
 // 
 // if (div.classList.contains("row-fluid")) {
@@ -80,6 +81,54 @@ unit.addEventListener(
 // }
 // 
 // 
+//work for second set of everything
+//hide all irrelevant objects
+var carObjects2 = document.getElementsByClassName("li_2");
+//console.log(carObjects[1]);
+ var icounter = 0;
+console.log(carObjects2.length);
+//setting hidden
+for (i=1; i< carObjects2.length; i++) {
+	var individualObject2 = carObjects2[i];
+	individualObject2.classList.add("hidden");
+	console.log(individualObject2)
+}
+//adding buttons for second set - wrong position
+var buttons = '<div id="controls2"><p id="control-prev2" class="btn btn-primary">Previous slide2</p><p id="control-next2" class="btn btn-primary">Next slide2</p></div>'
+carousel.insertAdjacentHTML("afterend", buttons)
+
+//working loop - control next	
+document.getElementById("control-next2").addEventListener(
+	"click",
+	function goingforwards(event) {
+				//shows the next item
+		carObjects2[icounter].classList.add("hidden")
+		icounter=(icounter+1)%6;
+		carObjects2[icounter].classList.remove("hidden")
+
+		//console.log(icounter);
+		//console.log(i);
+		//console.log(carObjects[icounter]);
+	}
+	);
+//working loop - control previous
+
+document.getElementById("control-prev2").addEventListener(
+	"click",
+	function goingBackwards(event) {
+		carObjects2[icounter].classList.add("hidden")
+		icounter=((icounter-1)+6)%6;
+		//console.log(icounter);
+		carObjects2[icounter].classList.remove("hidden")
+		// console.log(icounter);
+		// console.log(i);
+		// console.log(carObjects[icounter]);
+		//shows the next item
+	
+	}
+
+	);
+	
 
 
 
