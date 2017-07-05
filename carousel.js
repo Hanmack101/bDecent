@@ -81,7 +81,9 @@ document.getElementById("control-prev").addEventListener(
 // }
 // 
 // 
-//work for second set of everything
+
+
+//---------work for SECOND SET of everything----------------//
 //hide all irrelevant objects
 var carObjects2 = document.getElementsByClassName("li_2");
 //console.log(carObjects[1]);
@@ -95,7 +97,7 @@ for (i=1; i< carObjects2.length; i++) {
 }
 //adding buttons for second set - wrong position
 var buttons = '<div id="controls2"><p id="control-prev2" class="btn btn-primary">Previous slide2</p><p id="control-next2" class="btn btn-primary">Next slide2</p></div>'
-carousel.insertAdjacentHTML("afterend", buttons)
+carousel2.insertAdjacentHTML("afterend", buttons)
 
 //working loop - control next	
 document.getElementById("control-next2").addEventListener(
