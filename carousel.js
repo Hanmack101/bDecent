@@ -1,5 +1,5 @@
 //------LATEST VERSION------//
-console.log("test")
+console.log("test test test")
 //select all images
 var carObjects = document.getElementsByClassName("li_1");
 console.log(carObjects);
