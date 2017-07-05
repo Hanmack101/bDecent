@@ -2,13 +2,13 @@
 console.log("test test test")
 //select all images
 var carObjects = document.getElementsByClassName("li_1");
-console.log(carObjects);
+console.log(carObjects[1]);
  var icounter = 0;
 console.log(carObjects.length);
 //setting hidden
 for (i=1; i< carObjects.length; i++) {
 	var individualObject = carObjects[i];
-	individualObject.addClass("class","hidden");
+	individualObject.classList.add("hidden");
 	console.log(individualObject)
 }
 //adding in buttons
